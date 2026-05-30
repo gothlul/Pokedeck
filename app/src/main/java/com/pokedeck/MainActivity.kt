@@ -10,8 +10,11 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import com.pokedeck.components.contentbar.Topbar
+import com.pokedeck.components.contentbar.navbar.NavItem
+import com.pokedeck.components.contentbar.navbar.Navbar
 import com.pokedeck.core.models.User
 import com.pokedeck.ui.theme.PokedeckTheme
 
@@ -23,6 +26,20 @@ class MainActivity : ComponentActivity() {
             PokedeckTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Topbar(User("JuniorPoggers", "", "", "", "", "", R.drawable.charizard, 27.0))
+                    Navbar(navItems = listOf(        // ← lista de itens
+                        NavItem(
+                            icon = R.drawable.catalog_icon,
+                            onTap = { }
+                        ),
+                        NavItem(
+                            icon = R.drawable.inventory_icon,
+                            onTap = { }
+                        ),
+                        NavItem(
+                            icon = R.drawable.profile_icon,
+                            onTap = { }
+                        )
+                    ))
                 }
             }
         }
