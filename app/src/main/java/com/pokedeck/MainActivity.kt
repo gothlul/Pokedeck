@@ -15,6 +15,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.pokedeck.components.contentbar.Topbar
 import com.pokedeck.components.contentbar.navbar.NavItem
 import com.pokedeck.components.contentbar.navbar.Navbar
+import com.pokedeck.components.fields.SearchField
 import com.pokedeck.components.pages.MainPage
 import com.pokedeck.core.models.User
 import com.pokedeck.ui.theme.PokedeckTheme
@@ -25,7 +26,9 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             PokedeckTheme {
-                MainPage() { }
+                MainPage() {
+
+                }
             }
         }
     }

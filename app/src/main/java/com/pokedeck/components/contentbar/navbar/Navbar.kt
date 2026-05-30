@@ -45,6 +45,7 @@ fun Navbar(
             painter = painterResource(id = R.drawable.navbar_background),
             contentDescription = null,
             contentScale = ContentScale.Crop,
+            alignment = Alignment.TopCenter,
             modifier = Modifier
                 .fillMaxHeight()
         )
