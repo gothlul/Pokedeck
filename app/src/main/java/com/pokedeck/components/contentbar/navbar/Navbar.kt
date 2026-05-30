@@ -40,7 +40,6 @@ fun Navbar(
         modifier = Modifier
             .fillMaxWidth()
             .height(IntrinsicSize.Min)
-            .padding(bottom = 50.dp),
     ){
         Image(
             painter = painterResource(id = R.drawable.navbar_background),
@@ -50,7 +49,10 @@ fun Navbar(
                 .fillMaxHeight()
         )
         Row(
-            modifier = Modifier.fillMaxWidth(),
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(top = 20.dp, bottom = 60.dp),
+
             horizontalArrangement = Arrangement.spacedBy(25.dp, Alignment.CenterHorizontally)
         ) {
             navItems.forEachIndexed { index, item ->
@@ -60,19 +62,19 @@ fun Navbar(
 
                 Surface(
                     modifier = Modifier
-                        .size(60.dp)
+                        .size(72.dp)
                         .clickable {
                             selectedIndex = index
                             item.onTap()
                         },
                     color = bgColor,
-                    shape = RoundedCornerShape(12.dp)
+                    shape = RoundedCornerShape(20.dp)
                 ) {
                     Image(
                         painter = painterResource(id = item.icon),
                         contentDescription = null,
                         modifier = Modifier
-                            .padding(15.dp),
+                            .padding(20.dp),
                         colorFilter = ColorFilter.tint(if(isSelected) Blue else Color.White.copy(alpha = 0.5f))
                     )
                 }

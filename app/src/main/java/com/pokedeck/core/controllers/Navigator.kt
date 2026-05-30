@@ -6,7 +6,7 @@ import androidx.compose.runtime.setValue
 
 enum class Screen { CATALOG, INVENTORY, PROFILE }
 
-class NavigatorController {
+class Navigator {
     companion object{
         var currentNavigatorIndex by mutableStateOf(Screen.CATALOG)
 
