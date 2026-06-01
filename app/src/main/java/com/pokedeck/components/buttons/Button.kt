@@ -1,6 +1,7 @@
 package com.pokedeck.components.buttons
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.Text
 import androidx.compose.ui.Modifier
@@ -18,15 +19,21 @@ import com.pokedeck.ui.theme.Magenta
 
 @Composable
 fun Button(
+    modifier: Modifier = Modifier,
     label: String,
-    color: Color = Magenta
+    color: Color = Magenta,
+    onClick: () -> Unit,
+    offSet: Boolean = false
 ){
     Box(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clip(RoundedCornerShape(5.dp))
-            .background(color),
-        contentAlignment = Alignment.Center
+        modifier = modifier
+            .clip(RoundedCornerShape(8.dp))
+            .background(if (offSet) Color.White else color)
+            .clickable {
+                onClick()
+            },
+        contentAlignment = Alignment.Center,
+
     ){
         Text(
             label.uppercase(),
@@ -34,7 +41,7 @@ fun Button(
                 .padding(vertical = 10.dp, horizontal = 20.dp),
             fontSize = 16.sp,
             fontWeight = FontWeight.SemiBold,
-            color = Color.White
+            color = if (!offSet) Color.White else color
         )
     }
 }
