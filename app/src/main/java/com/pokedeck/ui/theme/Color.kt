@@ -3,6 +3,7 @@ package com.pokedeck.ui.theme
 import androidx.compose.ui.graphics.Color
 
 val Blue = Color(0xFF0D6CFB)
+val Magenta = Color(0xFFED008C)
 val PurpleGrey80 = Color(0xFFCCC2DC)
 val Pink80 = Color(0xFFEFB8C8)
 

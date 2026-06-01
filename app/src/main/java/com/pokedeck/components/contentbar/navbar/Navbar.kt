@@ -31,7 +31,6 @@ import com.pokedeck.ui.theme.Blue
 
 @Composable
 fun Navbar(
-    modifier: Modifier = Modifier,
     navItems: List<NavItem>
 ){
     var selectedIndex by remember { mutableIntStateOf(0) }
@@ -48,6 +47,7 @@ fun Navbar(
             alignment = Alignment.TopCenter,
             modifier = Modifier
                 .fillMaxHeight()
+                .fillMaxWidth()
         )
         Row(
             modifier = Modifier

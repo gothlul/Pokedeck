@@ -4,20 +4,12 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
-import com.pokedeck.components.contentbar.Topbar
-import com.pokedeck.components.contentbar.navbar.NavItem
-import com.pokedeck.components.contentbar.navbar.Navbar
-import com.pokedeck.components.fields.SearchField
+import com.pokedeck.components.buttons.Button
 import com.pokedeck.components.pages.MainPage
-import com.pokedeck.core.models.User
 import com.pokedeck.ui.theme.PokedeckTheme
 
 class MainActivity : ComponentActivity() {
@@ -27,7 +19,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             PokedeckTheme {
                 MainPage() {
-
+                    Button("text")
                 }
             }
         }
